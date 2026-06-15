@@ -1,0 +1,9 @@
+node_modules/
+dist/
+pdfs/
+.DS_Store
+*.local
+.env
+
+# Local Netlify folder
+.netlify
