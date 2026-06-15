@@ -223,7 +223,7 @@ export default function CatalogViewer({ catalog }) {
   return (
     <SpecRoot catalogId={catalog.id}>
       <div className="flex flex-col h-full">
-        <header className="relative flex items-center justify-between px-4 py-2 bg-surface/80 backdrop-blur-lg border-b border-white/5 shrink-0 gap-2 z-20">
+        <header className="flex items-center px-4 py-2 bg-surface/80 backdrop-blur-lg border-b border-white/5 shrink-0 gap-2 z-20">
           <a
             href="/"
             className="flex items-center gap-2 text-on-surface-variant hover:text-on-surface transition-colors shrink-0 z-10"
@@ -232,11 +232,14 @@ export default function CatalogViewer({ catalog }) {
             <span className="text-sm font-medium">Volver<span className="hidden sm:inline"> a Fichas</span></span>
           </a>
 
-          <span className="absolute left-1/2 -translate-x-1/2 text-sm font-medium text-on-surface truncate max-w-40 lg:max-w-64">
-            {title}
-          </span>
+          <div className="flex-1 flex items-center justify-center gap-3 min-w-0">
+            <span className="text-sm font-medium text-on-surface truncate max-w-40 lg:max-w-64">
+              {title}
+            </span>
+            <ThumbnailStrip images={images} currentPage={currentPage} goTo={goTo} compact />
+          </div>
 
-          <div className="flex items-center gap-1.5 lg:gap-2">
+          <div className="flex items-center gap-1.5 lg:gap-2 shrink-0">
             <div className="hidden sm:flex items-center gap-0.5 bg-surface-high/50 rounded-lg px-1.5 py-1">
               <button
                 onClick={handleZoomOut}
@@ -397,7 +400,6 @@ export default function CatalogViewer({ catalog }) {
 
         <div className="shrink-0">
           <PageControls currentPage={currentPage} totalPages={totalPages} goTo={goTo} />
-          <ThumbnailStrip images={images} currentPage={currentPage} goTo={goTo} />
         </div>
       </div>
     </SpecRoot>

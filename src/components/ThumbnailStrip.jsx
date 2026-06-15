@@ -1,6 +1,6 @@
 import { useRef, useEffect } from 'react'
 
-export default function ThumbnailStrip({ images, currentPage, goTo }) {
+export default function ThumbnailStrip({ images, currentPage, goTo, compact }) {
   const stripRef = useRef(null)
   const activeRef = useRef(null)
 
@@ -16,7 +16,10 @@ export default function ThumbnailStrip({ images, currentPage, goTo }) {
   return (
     <div
       ref={stripRef}
-      className="flex gap-2 overflow-x-auto no-scrollbar px-4 py-3 bg-surface/60 backdrop-blur-sm border-t border-white/5"
+      className={compact
+        ? "flex gap-2 overflow-x-auto no-scrollbar"
+        : "flex gap-2 overflow-x-auto no-scrollbar px-4 py-3 bg-surface/60 backdrop-blur-sm border-t border-white/5"
+      }
     >
       {images.map((src, i) => (
         <button
