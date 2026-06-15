@@ -4,6 +4,7 @@ pdfs/
 .DS_Store
 *.local
 .env
+.astro/
 
 # Local Netlify folder
 .netlify

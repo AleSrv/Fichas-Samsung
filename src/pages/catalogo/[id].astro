@@ -1,0 +1,18 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import CatalogViewer from '../../components/CatalogViewer'
+import { catalogos } from '../../data/catalogos'
+
+export function getStaticPaths() {
+  return catalogos.map(cat => ({
+    params: { id: cat.id },
+    props: { catalog: cat },
+  }))
+}
+
+const { catalog } = Astro.props
+---
+
+<BaseLayout>
+  <CatalogViewer catalog={catalog} client:load />
+</BaseLayout>

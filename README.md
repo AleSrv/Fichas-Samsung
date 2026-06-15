@@ -2,9 +2,9 @@
 
 Visor web de fichas técnicas Samsung con navegación tipo flipbook, zoom, pantalla completa y descarga directa del PDF.
 
-Construido con React 19, Vite 6 y Tailwind CSS v4.
+Construido con Astro 5, React 19 y Tailwind CSS v4.
 
-![Vite](https://img.shields.io/badge/Vite-6-646CFF?logo=vite) ![React](https://img.shields.io/badge/React-19-58c4dc?logo=react) ![Tailwind](https://img.shields.io/badge/Tailwind-4-06b6d4?logo=tailwindcss)
+![Astro](https://img.shields.io/badge/Astro-5-BC52EE?logo=astro) ![React](https://img.shields.io/badge/React-19-58c4dc?logo=react) ![Tailwind](https://img.shields.io/badge/Tailwind-4-06b6d4?logo=tailwindcss)
 
 ## Características
 
@@ -22,13 +22,22 @@ Construido con React 19, Vite 6 y Tailwind CSS v4.
 
 | | |
 |---|---|
-| Runtime | Vite 6 |
-| UI | React 19 |
+| Framework | Astro 5 |
+| UI (islas) | React 19 |
 | Estilos | Tailwind CSS v4 |
 | Iconos | Material Symbols Outlined |
 | Tipografía | Inter |
 | PDF (build) | pdf-to-png-converter + sharp |
 | Almacenamiento | Google Drive (directo) |
+
+## Arquitectura
+
+Astro genera páginas estáticas con islas React para la interactividad:
+
+- **`/`** → Grid de catálogos (HTML estático + isla React para búsqueda/filtro)
+- **`/catalogo/{id}`** → Visor del catálogo (isla React para gestos, zoom, swipe, compartir)
+
+Cada catálogo tiene su propia URL real (`/catalogo/s90h-2026/`). No es SPA — la navegación entre páginas es mediante `<a>` links nativos.
 
 ## Uso
 
@@ -37,7 +46,7 @@ npm install
 npm run dev
 ```
 
-Abrir en `http://localhost:5173`
+Abrir en `http://localhost:4321`
 
 ## Build producción
 
@@ -46,7 +55,20 @@ npm run build
 npm run preview
 ```
 
-Los archivos estáticos se generan en `dist/`. Compatible con deploy en Netlify (incluye `netlify.toml` con redirect SPA).
+Los archivos estáticos se generan en `dist/` con esta estructura:
+
+```
+dist/
+├── index.html                    ← Grid
+├── catalogo/
+│   ├── s90h-2026/index.html      ← Viewer S90H
+│   ├── s95h-2026/index.html      ← Viewer S95H
+│   └── ...                       ← 37 catálogos
+├── images/                       ← WebP pre-renderizados
+└── _astro/                       ← JS/CSS hasheados
+```
+
+Compatible con deploy en Netlify (incluye `netlify.toml`).
 
 ## Agregar un catálogo
 
@@ -76,8 +98,8 @@ node scripts/export-images.mjs
 
 | Comando | Descripción |
 |---|---|
-| `npm run dev` | Servidor de desarrollo Vite |
-| `npm run build` | Build de producción |
+| `npm run dev` | Servidor de desarrollo Astro |
+| `npm run build` | Build de producción (SSG) |
 | `npm run preview` | Vista previa del build |
 | `npm run lint` | ESLint |
 | `node scripts/export-images.mjs` | Renderiza PDFs → WebP |

@@ -2,7 +2,7 @@ import { useState, useRef, useEffect, useCallback } from 'react'
 import PageControls from './PageControls'
 import ThumbnailStrip from './ThumbnailStrip'
 
-export default function CatalogViewer({ catalog, onBack }) {
+export default function CatalogViewer({ catalog }) {
   const totalPages = catalog.pages
   const images = catalog.images
   const title = catalog.title
@@ -215,20 +215,20 @@ export default function CatalogViewer({ catalog, onBack }) {
   const imgSrc = images[currentPage - 1]
   const isZoomed = scale > 1.05
   const pdfUrl = `https://drive.google.com/uc?export=download&id=${catalog.fileId}&confirm=t`
-  const pageUrl = encodeURIComponent(window.location.href)
+  const pageUrl = typeof window !== 'undefined' ? encodeURIComponent(window.location.href) : ''
   const pdfEncoded = encodeURIComponent(pdfUrl)
   const shareText = encodeURIComponent(`${title} — Ficha técnica Samsung`)
 
   return (
     <div className="flex flex-col h-full">
       <header className="relative flex items-center justify-between px-4 py-2 bg-surface/80 backdrop-blur-lg border-b border-white/5 shrink-0 gap-2 z-20">
-        <button
-          onClick={onBack}
+        <a
+          href="/"
           className="flex items-center gap-2 text-on-surface-variant hover:text-on-surface transition-colors shrink-0 z-10"
         >
           <span className="material-symbols-outlined">arrow_back</span>
           <span className="text-sm font-medium">Volver<span className="hidden sm:inline"> a Fichas</span></span>
-        </button>
+        </a>
 
         <span className="absolute left-1/2 -translate-x-1/2 text-sm font-medium text-on-surface truncate max-w-40 lg:max-w-64">
           {title}

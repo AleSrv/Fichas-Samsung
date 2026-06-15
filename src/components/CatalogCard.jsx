@@ -6,16 +6,16 @@ function hashColor(id) {
   return COLORS[Math.abs(h) % COLORS.length]
 }
 
-export default function CatalogCard({ catalog, onOpen }) {
+export default function CatalogCard({ catalog }) {
   const accent = hashColor(catalog.id)
   const thumb = catalog.images[0]
 
   return (
-    <button
-      onClick={() => onOpen(catalog)}
+    <a
+      href={`/catalogo/${catalog.id}`}
       className="group relative bg-surface-low/50 border border-white/5 rounded-md overflow-hidden
         hover:border-primary/30 hover:-translate-y-0.5 active:scale-[0.98]
-        transition-all duration-200 text-left cursor-pointer"
+        transition-all duration-200 text-left cursor-pointer block"
     >
       <div className="p-1">
         <div
@@ -37,6 +37,6 @@ export default function CatalogCard({ catalog, onOpen }) {
           </div>
         </div>
       </div>
-    </button>
+    </a>
   )
 }

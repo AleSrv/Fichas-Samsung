@@ -4,7 +4,7 @@ import { catalogos } from '../data/catalogos'
 
 const THRESHOLD = 60
 
-export default function CatalogGrid({ onOpenCatalog }) {
+export default function CatalogGrid() {
   const [filter, setFilter] = useState('all')
   const [search, setSearch] = useState('')
   const [pullPhase, setPullPhase] = useState('idle')
@@ -97,7 +97,6 @@ export default function CatalogGrid({ onOpenCatalog }) {
               <CatalogCard
                 key={cat.id}
                 catalog={cat}
-                onOpen={onOpenCatalog}
               />
             ))}
           </div>
