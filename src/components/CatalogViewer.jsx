@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect, useCallback } from 'react'
 import PageControls from './PageControls'
 import ThumbnailStrip from './ThumbnailStrip'
+import SpecOverlay from './SpecOverlay'
 
 export default function CatalogViewer({ catalog }) {
   const totalPages = catalog.pages
@@ -11,6 +12,7 @@ export default function CatalogViewer({ catalog }) {
   const [scale, setScale] = useState(1)
   const [offset, setOffset] = useState({ x: 0, y: 0 })
   const [showShareMenu, setShowShareMenu] = useState(false)
+  const [showSpecs, setShowSpecs] = useState(false)
   const containerRef = useRef(null)
   const shareRef = useRef(null)
   const g = useRef({
@@ -315,6 +317,14 @@ export default function CatalogViewer({ catalog }) {
           </div>
 
           <button
+            onClick={() => setShowSpecs(true)}
+            className="p-2 rounded-lg hover:bg-surface-high transition-colors text-on-surface-variant hover:text-primary"
+            title="Ficha técnica"
+          >
+            <span className="material-symbols-outlined">description</span>
+          </button>
+
+          <button
             onClick={toggleFullscreen}
             className="p-2 rounded-lg hover:bg-surface-high transition-colors text-on-surface-variant hover:text-on-surface"
             title={fullscreen ? 'Salir de pantalla completa' : 'Pantalla completa'}
@@ -383,6 +393,10 @@ export default function CatalogViewer({ catalog }) {
         <PageControls currentPage={currentPage} totalPages={totalPages} goTo={goTo} />
         <ThumbnailStrip images={images} currentPage={currentPage} goTo={goTo} />
       </div>
+
+      {showSpecs && (
+        <SpecOverlay catalogId={catalog.id} onClose={() => setShowSpecs(false)} />
+      )}
     </div>
   )
 }
