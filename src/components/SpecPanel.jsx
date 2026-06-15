@@ -1,0 +1,142 @@
+import { createContext, useContext, useState, useMemo } from 'react'
+import ReactMarkdown from 'react-markdown'
+import remarkGfm from 'remark-gfm'
+import parseSpecSections from '../utils/parseSpecSections'
+
+const specModules = import.meta.glob('/src/data/specs/*.md', { query: '?raw', import: 'default', eager: true })
+
+const SpecCtx = createContext(null)
+
+export function SpecRoot({ catalogId, children }) {
+  const [hoveredId, setHoveredId] = useState(null)
+
+  const sections = useMemo(() => {
+    const path = `/src/data/specs/${catalogId}.md`
+    const mod = specModules[path]
+    return mod ? parseSpecSections(mod) : []
+  }, [catalogId])
+
+  return (
+    <SpecCtx.Provider value={{ sections, hoveredId, setHoveredId }}>
+      {children}
+    </SpecCtx.Provider>
+  )
+}
+
+function useSpec() {
+  const ctx = useContext(SpecCtx)
+  if (!ctx) throw new Error('Spec components must be used within <SpecRoot>')
+  return ctx
+}
+
+export function SpecTOC() {
+  const { sections, hoveredId, setHoveredId } = useSpec()
+
+  if (sections.length === 0) return null
+
+  return (
+    <nav className="flex flex-col gap-0.5 p-3">
+      {sections.map((s) => (
+        <button
+          key={s.id}
+          onMouseEnter={() => setHoveredId(s.id)}
+          onMouseLeave={() => setHoveredId(null)}
+          className={`relative w-full text-left px-3 py-2.5 rounded-lg text-sm font-medium transition-all duration-200 cursor-pointer ${
+            hoveredId === s.id
+              ? 'bg-primary/10 text-primary shadow-[0_0_12px_rgba(192,193,255,0.08)]'
+              : 'text-on-surface-variant hover:text-on-surface hover:bg-surface-high'
+          }`}
+        >
+          {hoveredId === s.id && (
+            <span className="absolute left-0 top-1/2 -translate-y-1/2 w-0.5 h-5 bg-primary rounded-full" />
+          )}
+          {s.title}
+        </button>
+      ))}
+    </nav>
+  )
+}
+
+function MarkdownContent({ content }) {
+  return (
+    <div className="text-sm text-on-surface leading-relaxed">
+      <ReactMarkdown
+        remarkPlugins={[remarkGfm]}
+        components={{
+          table: ({ children }) => (
+            <div className="overflow-x-auto mb-4">
+              <table className="w-full text-xs border-collapse">{children}</table>
+            </div>
+          ),
+          tr: ({ children }) => (
+            <tr className="border-b border-white/5 even:bg-white/[0.02]">{children}</tr>
+          ),
+          th: ({ children }) => (
+            <th className="text-left px-3 py-2 font-semibold text-primary whitespace-nowrap">{children}</th>
+          ),
+          td: ({ children }) => (
+            <td className="px-3 py-2 text-on-surface-variant whitespace-nowrap">{children}</td>
+          ),
+          h2: ({ children }) => (
+            <h2 className="text-sm font-bold text-on-surface mt-5 mb-2 pb-1 border-b border-white/5">{children}</h2>
+          ),
+          p: ({ children }) => {
+            const text = typeof children === 'string' ? children : ''
+            if (text.match(/^(Samsung|HW-)/i)) {
+              return <p className="text-xs text-tertiary font-semibold mt-2 mb-1">{children}</p>
+            }
+            return <p className="text-xs text-outline my-1">{children}</p>
+          },
+        }}
+      >
+        {content}
+      </ReactMarkdown>
+    </div>
+  )
+}
+
+export function SpecContent() {
+  const { sections, hoveredId } = useSpec()
+
+  const activeId = hoveredId || (sections.length > 0 ? sections[0].id : null)
+  const active = sections.find((s) => s.id === activeId)
+
+  if (!active) {
+    return (
+      <div className="flex flex-col items-center justify-center h-full text-center p-6">
+        <span className="material-symbols-outlined text-3xl text-outline/30 mb-3">description</span>
+        <p className="text-xs text-outline/50">Pasa el cursor sobre una sección</p>
+      </div>
+    )
+  }
+
+  return (
+    <div key={active.id} className="p-4 animate-fade-up">
+      <h3 className="text-xs uppercase tracking-widest font-semibold text-primary mb-3">{active.title}</h3>
+      <MarkdownContent content={active.content} />
+    </div>
+  )
+}
+
+export function SpecMobile() {
+  const { sections } = useSpec()
+
+  if (sections.length === 0) {
+    return (
+      <div className="p-6 text-center text-xs text-outline/50">
+        No hay ficha técnica disponible
+      </div>
+    )
+  }
+
+  return (
+    <div className="divide-y divide-white/5">
+      {sections.map((s) => (
+        <section key={s.id} className="p-4">
+          <h3 className="text-xs uppercase tracking-widest font-semibold text-primary mb-3">{s.title}</h3>
+          <MarkdownContent content={s.content} />
+        </section>
+      ))}
+    </div>
+  )
+}
