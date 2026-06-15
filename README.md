@@ -1,4 +1,4 @@
-# Catálogo PDF Web — Fichas técnicas Samsung
+# Catálogo Web — Fichas técnicas Samsung
 
 Visor web de fichas técnicas Samsung con navegación tipo flipbook, zoom, pantalla completa y descarga directa del PDF.
 
