@@ -353,7 +353,7 @@ export default function CatalogViewer({ catalog }) {
               <img
                 src={imgSrc}
                 alt={`Página ${currentPage}`}
-                className="max-h-full max-w-full object-contain rounded-lg shadow-2xl"
+                className="max-h-[calc(100vh-20rem)] max-w-[85vw] object-contain rounded-lg shadow-2xl"
                 draggable={false}
               />
             </div>
