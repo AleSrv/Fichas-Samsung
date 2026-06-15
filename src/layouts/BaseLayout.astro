@@ -18,7 +18,14 @@ import '../index.css'
     />
     <title>Fichas Técnicas Samsung 2026</title>
   </head>
-  <body class="h-full">
-    <slot />
+  <body class="h-full flex flex-col">
+    <div class="flex-1 min-h-0">
+      <slot />
+    </div>
+    <footer class="shrink-0 text-center px-4 py-3 text-[10px] uppercase tracking-widest text-outline/50 border-t border-white/5 leading-relaxed">
+      <p>© 2026 Alex Marbella</p>
+      <p>Samsung y los nombres de productos Samsung son marcas registradas de Samsung Electronics Co., Ltd.</p>
+      <p>Las especificaciones, imágenes y descripciones de los productos pertenecen a Samsung Electronics y se muestran con fines informativos.</p>
+    </footer>
   </body>
 </html>
