@@ -338,7 +338,7 @@ export default function CatalogViewer({ catalog }) {
 
           <div
             ref={containerRef}
-            className="flex-1 flex items-center justify-center lg:justify-start overflow-hidden relative select-none p-4 lg:py-8 lg:pr-8 lg:pl-0"
+            className="flex-1 flex items-center justify-center overflow-hidden relative select-none p-4 lg:py-8 lg:px-3"
             onPointerDown={handlePointerDown}
             onPointerMove={handlePointerMove}
             onPointerUp={handlePointerUp}
