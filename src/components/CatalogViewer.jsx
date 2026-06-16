@@ -364,7 +364,7 @@ export default function CatalogViewer({ catalog }) {
               <button
                 onClick={(e) => { e.stopPropagation(); setLightboxOpen(true) }}
                 onPointerDown={(e) => e.stopPropagation()}
-                className="absolute top-2 right-2 w-8 h-8 rounded-full bg-black/40 backdrop-blur-sm border border-white/10 flex items-center justify-center hover:bg-black/60 transition-colors cursor-pointer lg:opacity-60 hover:opacity-100"
+                className="absolute bottom-3 right-3 w-8 h-8 rounded-full bg-black/40 backdrop-blur-sm border border-white/10 flex items-center justify-center hover:bg-black/60 transition-colors cursor-pointer lg:opacity-60 hover:opacity-100"
                 title="Ampliar"
               >
                 <span className="material-symbols-outlined text-white text-base">zoom_in</span>
