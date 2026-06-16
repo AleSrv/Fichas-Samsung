@@ -394,7 +394,7 @@ export default function CatalogViewer({ catalog }) {
           </aside>
         </div>
 
-        <div className="lg:hidden shrink-0 border-t border-white/5 overflow-y-auto max-h-[35vh]">
+        <div className="lg:hidden shrink-0 border-t border-white/5">
           <SpecMobile />
         </div>
 
