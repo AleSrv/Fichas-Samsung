@@ -222,7 +222,7 @@ export default function CatalogViewer({ catalog }) {
 
   return (
     <SpecRoot catalogId={catalog.id}>
-      <div className="flex flex-col h-full">
+      <div className="flex flex-col h-full overflow-y-auto lg:overflow-hidden">
         <header className="flex items-center px-4 py-2 bg-surface/80 backdrop-blur-lg border-b border-white/5 shrink-0 gap-2 z-20">
           <a
             href="/"
