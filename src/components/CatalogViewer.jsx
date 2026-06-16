@@ -363,8 +363,7 @@ export default function CatalogViewer({ catalog }) {
               />
               <button
                 onClick={(e) => { e.stopPropagation(); setLightboxOpen(true) }}
-                onPointerDown={(e) => e.stopPropagation()}
-                className="absolute bottom-3 right-3 w-8 h-8 rounded-full bg-black/40 backdrop-blur-sm border border-white/10 flex items-center justify-center hover:bg-black/60 transition-colors cursor-pointer lg:opacity-60 hover:opacity-100"
+                className="absolute bottom-3 right-3 w-8 h-8 rounded-full bg-black/40 backdrop-blur-sm border border-white/10 flex items-center justify-center hover:bg-black/60 transition-colors cursor-pointer lg:opacity-60 hover:opacity-100 z-10"
                 title="Ampliar"
               >
                 <span className="material-symbols-outlined text-white text-base">zoom_in</span>
@@ -414,7 +413,7 @@ export default function CatalogViewer({ catalog }) {
 
       {lightboxOpen && (
         <div
-          className="fixed inset-0 z-50 bg-black/90 hidden lg:flex items-center justify-center"
+          className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center"
           onClick={() => setLightboxOpen(false)}
         >
           <button
