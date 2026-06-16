@@ -389,7 +389,7 @@ export default function CatalogViewer({ catalog }) {
             <SpecTOC />
           </aside>
 
-          <aside className="hidden lg:flex flex-col w-80 shrink-0 border-l border-white/5 overflow-y-auto">
+          <aside className="hidden lg:flex flex-col flex-1 min-w-0 border-l border-white/5 overflow-y-auto">
             <SpecContent />
           </aside>
         </div>
