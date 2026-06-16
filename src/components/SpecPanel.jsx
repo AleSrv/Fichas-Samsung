@@ -29,10 +29,31 @@ function useSpec() {
   return ctx
 }
 
-export function SpecTOC() {
+export function SpecTOC({ horizontal }) {
   const { sections, hoveredId, setHoveredId } = useSpec()
 
   if (sections.length === 0) return null
+
+  if (horizontal) {
+    return (
+      <nav className="flex items-center gap-1 overflow-x-auto no-scrollbar px-3 py-2">
+        {sections.map((s) => (
+          <button
+            key={s.id}
+            onMouseEnter={() => setHoveredId(s.id)}
+            onMouseLeave={() => setHoveredId(null)}
+            className={`whitespace-nowrap px-3 py-1.5 rounded-lg text-xs font-medium transition-all duration-200 cursor-pointer ${
+              hoveredId === s.id
+                ? 'bg-primary/15 text-primary shadow-[0_0_12px_rgba(192,193,255,0.08)]'
+                : 'text-on-surface-variant hover:text-on-surface hover:bg-surface-high'
+            }`}
+          >
+            {s.title}
+          </button>
+        ))}
+      </nav>
+    )
+  }
 
   return (
     <nav className="flex flex-col gap-0.5 p-3 pr-5">

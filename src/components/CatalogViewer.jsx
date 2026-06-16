@@ -331,11 +331,11 @@ export default function CatalogViewer({ catalog }) {
           </div>
         </header>
 
-        <div className="flex-1 flex flex-col lg:flex-row min-h-0">
-          <aside className="hidden lg:flex flex-col w-48 shrink-0 border-r border-white/5 overflow-y-auto">
-            <SpecTOC />
-          </aside>
+        <div className="hidden lg:flex shrink-0 items-center gap-1 border-b border-white/5 overflow-x-auto no-scrollbar bg-surface/40">
+          <SpecTOC horizontal />
+        </div>
 
+        <div className="flex-1 flex flex-col lg:flex-row min-h-0">
           <div
             ref={containerRef}
             className="flex-1 flex items-center overflow-hidden relative select-none p-4 lg:py-8 lg:pr-3 lg:pl-1"
