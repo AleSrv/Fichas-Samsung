@@ -12,6 +12,7 @@ export default function CatalogViewer({ catalog }) {
   const [scale, setScale] = useState(1)
   const [offset, setOffset] = useState({ x: 0, y: 0 })
   const [showShareMenu, setShowShareMenu] = useState(false)
+  const [lightboxOpen, setLightboxOpen] = useState(false)
   const containerRef = useRef(null)
   const shareRef = useRef(null)
   const g = useRef({
@@ -205,12 +206,18 @@ export default function CatalogViewer({ catalog }) {
     return () => el.removeEventListener('wheel', handler)
   }, [])
 
+  useEffect(() => {
+    if (!lightboxOpen) return
+    const handler = (e) => { if (e.key === 'Escape') setLightboxOpen(false) }
+    window.addEventListener('keydown', handler)
+    return () => window.removeEventListener('keydown', handler)
+  }, [lightboxOpen])
+
   const handleZoomIn = () => setScale((s) => Math.min(s + 0.25, 3))
   const handleZoomOut = () => setScale((s) => Math.max(s - 0.25, 0.5))
   const handleZoomReset = () => { setScale(1); setOffset({ x: 0, y: 0 }) }
   const handleDoubleClick = () => {
-    if (scale > 1.05) { setScale(1); setOffset({ x: 0, y: 0 }) }
-    else { setScale(2); setOffset({ x: 0, y: 0 }) }
+    setLightboxOpen(true)
   }
 
   const imgSrc = images[currentPage - 1]
@@ -402,6 +409,27 @@ export default function CatalogViewer({ catalog }) {
           <PageControls currentPage={currentPage} totalPages={totalPages} goTo={goTo} />
         </div>
       </div>
+
+      {lightboxOpen && (
+        <div
+          className="fixed inset-0 z-50 bg-black/90 hidden lg:flex items-center justify-center"
+          onClick={() => setLightboxOpen(false)}
+        >
+          <button
+            onClick={() => setLightboxOpen(false)}
+            className="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors cursor-pointer z-10"
+          >
+            <span className="material-symbols-outlined text-white text-xl">close</span>
+          </button>
+          <img
+            src={imgSrc}
+            alt={`Página ${currentPage}`}
+            className="max-h-screen max-w-[95vw] object-contain"
+            draggable={false}
+            onClick={(e) => e.stopPropagation()}
+          />
+        </div>
+      )}
     </SpecRoot>
   )
 }
