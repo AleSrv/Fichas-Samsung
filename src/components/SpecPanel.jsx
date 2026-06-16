@@ -2,6 +2,7 @@ import { createContext, useContext, useState, useMemo, useRef, useCallback } fro
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import parseSpecSections from '../utils/parseSpecSections'
+import remoteModels from '../data/remoteModels'
 
 const specModules = import.meta.glob('/src/data/specs/*.md', { query: '?raw', import: 'default', eager: true })
 
@@ -27,7 +28,7 @@ export function SpecRoot({ catalogId, children }) {
   }, [catalogId])
 
   return (
-    <SpecCtx.Provider value={{ sections, hoveredId, setHoveredId, keepHover, delayClear }}>
+    <SpecCtx.Provider value={{ sections, hoveredId, setHoveredId, keepHover, delayClear, catalogId }}>
       {children}
     </SpecCtx.Provider>
   )
@@ -126,7 +127,7 @@ function MarkdownContent({ content }) {
 }
 
 export function SpecContent() {
-  const { sections, hoveredId, keepHover } = useSpec()
+  const { sections, hoveredId, keepHover, catalogId } = useSpec()
 
   const activeId = hoveredId || (sections.length > 0 ? sections[0].id : null)
   const active = sections.find((s) => s.id === activeId)
@@ -140,16 +141,31 @@ export function SpecContent() {
     )
   }
 
+  const remote = active.id === 'mando-a-distancia' ? remoteModels[catalogId] : null
+
   return (
     <div key={active.id} className="p-3 animate-fade-up overflow-x-hidden" onMouseEnter={keepHover}>
       <h3 className="text-xs uppercase tracking-widest font-semibold text-primary mb-2">{active.title}</h3>
       <MarkdownContent content={active.content} />
+      {remote && (
+        <div className="mt-4 flex flex-col items-center gap-2">
+          <img
+            src={`/images/remotes/${remote.model}.webp`}
+            alt={`Mando ${remote.model}`}
+            className="max-h-64 w-auto object-contain rounded-xl"
+            onError={(e) => e.target.style.display = 'none'}
+          />
+          {remote.description && (
+            <p className="text-xs text-outline text-center">{remote.description}</p>
+          )}
+        </div>
+      )}
     </div>
   )
 }
 
 export function SpecMobile() {
-  const { sections } = useSpec()
+  const { sections, catalogId } = useSpec()
 
   if (sections.length === 0) {
     return (
@@ -161,12 +177,28 @@ export function SpecMobile() {
 
   return (
     <div className="divide-y divide-white/5">
-      {sections.map((s) => (
-        <section key={s.id} className="p-4">
-          <h3 className="text-xs uppercase tracking-widest font-semibold text-primary mb-3">{s.title}</h3>
-          <MarkdownContent content={s.content} />
-        </section>
-      ))}
+      {sections.map((s) => {
+        const remote = s.id === 'mando-a-distancia' ? remoteModels[catalogId] : null
+        return (
+          <section key={s.id} className="p-4">
+            <h3 className="text-xs uppercase tracking-widest font-semibold text-primary mb-3">{s.title}</h3>
+            <MarkdownContent content={s.content} />
+            {remote && (
+              <div className="mt-4 flex flex-col items-center gap-2">
+                <img
+                  src={`/images/remotes/${remote.model}.webp`}
+                  alt={`Mando ${remote.model}`}
+                  className="max-h-48 w-auto object-contain rounded-xl"
+                  onError={(e) => e.target.style.display = 'none'}
+                />
+                {remote.description && (
+                  <p className="text-xs text-outline text-center">{remote.description}</p>
+                )}
+              </div>
+            )}
+          </section>
+        )
+      })}
     </div>
   )
 }
