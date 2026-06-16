@@ -1,5 +1,4 @@
 import { useState, useRef, useEffect, useCallback } from 'react'
-import PageControls from './PageControls'
 import ThumbnailStrip from './ThumbnailStrip'
 import { SpecRoot, SpecTOC, SpecContent, SpecMobile } from './SpecPanel'
 
@@ -403,10 +402,6 @@ export default function CatalogViewer({ catalog }) {
           <div className="lg:hidden shrink-0 border-t border-white/5">
             <SpecMobile />
           </div>
-        </div>
-
-        <div className="shrink-0">
-          <PageControls currentPage={currentPage} totalPages={totalPages} goTo={goTo} />
         </div>
       </div>
 
