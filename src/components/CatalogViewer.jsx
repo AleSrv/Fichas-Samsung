@@ -331,10 +331,10 @@ export default function CatalogViewer({ catalog }) {
           </div>
         </header>
 
-        <div className="flex-1 flex flex-col lg:flex-row min-h-0 lg:gap-x-2">
+        <div className="flex-1 flex flex-col lg:flex-row min-h-0 lg:gap-x-2 overflow-y-auto lg:overflow-visible">
           <div
             ref={containerRef}
-            className="flex-1 lg:flex-none flex justify-center items-start lg:items-center overflow-hidden relative select-none p-4 lg:py-8 lg:px-3"
+            className="min-h-[calc(100dvh-5rem)] lg:min-h-0 flex-1 lg:flex-none flex justify-center items-start lg:items-center overflow-hidden relative select-none p-4 lg:py-8 lg:px-3"
             onPointerDown={handlePointerDown}
             onPointerMove={handlePointerMove}
             onPointerUp={handlePointerUp}
@@ -392,10 +392,10 @@ export default function CatalogViewer({ catalog }) {
           <aside className="hidden lg:flex flex-col flex-1 min-w-0 border-l border-white/5 overflow-y-auto">
             <SpecContent />
           </aside>
-        </div>
 
-        <div className="lg:hidden shrink-0 border-t border-white/5 overflow-y-auto max-h-[35vh]">
-          <SpecMobile />
+          <div className="lg:hidden shrink-0 border-t border-white/5">
+            <SpecMobile />
+          </div>
         </div>
 
         <div className="shrink-0">
