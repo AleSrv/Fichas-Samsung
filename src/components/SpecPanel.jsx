@@ -1,4 +1,4 @@
-import { createContext, useContext, useState, useMemo } from 'react'
+import { createContext, useContext, useState, useMemo, useRef, useCallback } from 'react'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import parseSpecSections from '../utils/parseSpecSections'
@@ -9,6 +9,16 @@ const SpecCtx = createContext(null)
 
 export function SpecRoot({ catalogId, children }) {
   const [hoveredId, setHoveredId] = useState(null)
+  const clearTimer = useRef(null)
+
+  const keepHover = useCallback(() => {
+    clearTimeout(clearTimer.current)
+  }, [])
+
+  const delayClear = useCallback(() => {
+    clearTimeout(clearTimer.current)
+    clearTimer.current = setTimeout(() => setHoveredId(null), 300)
+  }, [])
 
   const sections = useMemo(() => {
     const path = `/src/data/specs/${catalogId}.md`
@@ -17,7 +27,7 @@ export function SpecRoot({ catalogId, children }) {
   }, [catalogId])
 
   return (
-    <SpecCtx.Provider value={{ sections, hoveredId, setHoveredId }}>
+    <SpecCtx.Provider value={{ sections, hoveredId, setHoveredId, keepHover, delayClear }}>
       {children}
     </SpecCtx.Provider>
   )
@@ -30,18 +40,17 @@ function useSpec() {
 }
 
 export function SpecTOC({ horizontal }) {
-  const { sections, hoveredId, setHoveredId } = useSpec()
+  const { sections, hoveredId, setHoveredId, keepHover, delayClear } = useSpec()
 
   if (sections.length === 0) return null
 
   if (horizontal) {
     return (
-      <nav className="flex items-center gap-1 overflow-x-auto no-scrollbar px-3 py-1.5">
+      <nav className="flex items-center gap-1 overflow-x-auto no-scrollbar px-3 py-1.5" onMouseLeave={delayClear}>
         {sections.map((s) => (
           <button
             key={s.id}
-            onMouseEnter={() => setHoveredId(s.id)}
-            onMouseLeave={() => setHoveredId(null)}
+            onMouseEnter={() => { keepHover(); setHoveredId(s.id) }}
             className={`whitespace-nowrap px-2.5 py-1 rounded-lg text-xs font-medium transition-all duration-200 cursor-pointer ${
               hoveredId === s.id
                 ? 'bg-primary/15 text-primary shadow-[0_0_12px_rgba(192,193,255,0.08)]'
@@ -117,7 +126,7 @@ function MarkdownContent({ content }) {
 }
 
 export function SpecContent() {
-  const { sections, hoveredId } = useSpec()
+  const { sections, hoveredId, keepHover } = useSpec()
 
   const activeId = hoveredId || (sections.length > 0 ? sections[0].id : null)
   const active = sections.find((s) => s.id === activeId)
@@ -132,7 +141,7 @@ export function SpecContent() {
   }
 
   return (
-    <div key={active.id} className="p-3 animate-fade-up overflow-x-hidden">
+    <div key={active.id} className="p-3 animate-fade-up overflow-x-hidden" onMouseEnter={keepHover}>
       <h3 className="text-xs uppercase tracking-widest font-semibold text-primary mb-2">{active.title}</h3>
       <MarkdownContent content={active.content} />
     </div>
