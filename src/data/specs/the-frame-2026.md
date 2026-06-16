@@ -14,7 +14,7 @@ Conexiones integradas en el TV con perfil Slim Fit Wall Mount. Nuevos back stopp
 
 Pregunta a tu TV, Bixby responde.
 
-## Mando a distancia
+## Accesorios
 
 Carga solar y USB-C.
 

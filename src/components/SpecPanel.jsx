@@ -141,7 +141,7 @@ export function SpecContent() {
     )
   }
 
-  const remote = active.id === 'mando-a-distancia' ? remoteModels[catalogId] : null
+  const remote = active.id === 'accesorios' ? remoteModels[catalogId] : null
 
   return (
     <div key={active.id} className="p-3 animate-fade-up overflow-x-hidden" onMouseEnter={keepHover}>
@@ -175,7 +175,7 @@ export function SpecMobile() {
   return (
     <div className="divide-y divide-white/5">
       {sections.map((s) => {
-        const remote = s.id === 'mando-a-distancia' ? remoteModels[catalogId] : null
+        const remote = s.id === 'accesorios' ? remoteModels[catalogId] : null
         return (
           <section key={s.id} className="p-4">
             <h3 className="text-xs uppercase tracking-widest font-semibold text-primary mb-3">{s.title}</h3>

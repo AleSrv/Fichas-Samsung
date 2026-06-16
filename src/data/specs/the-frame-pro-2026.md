@@ -14,7 +14,7 @@ Conexión inalámbrica 4K 144Hz hasta 10 m (30 ft) mediante Wi-Fi 7. Latencia ce
 
 Pregunta a tu TV, Bixby responde. Compatible con Microsoft Copilot y Perplexity.
 
-## Mando a distancia
+## Accesorios
 
 Carga solar y USB-C.
 

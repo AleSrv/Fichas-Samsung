@@ -51,7 +51,7 @@ Pantalla portátil con hasta 3 horas de batería integrada. Contrólalo con el d
 | Click to Search | Sí |
 | Generative Wallpaper | Sí |
 
-## Mando a distancia
+## Accesorios
 
 Carga solar y USB-C. Compatible con Slim Fit Cam.
 
