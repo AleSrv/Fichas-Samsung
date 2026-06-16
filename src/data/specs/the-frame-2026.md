@@ -16,7 +16,9 @@ Pregunta a tu TV, Bixby responde.
 
 ## Mando a distancia
 
-Carga solar y USB-C. Compatible con Slim Fit Cam.
+Carga solar y USB-C.
+
+## Especificaciones
 
 | Característica | Especificación |
 |---|---|
