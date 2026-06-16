@@ -150,7 +150,7 @@ export function SpecContent() {
       {remote && (
         <div className="mt-4 flex flex-col items-center gap-2">
           <img
-            src={`/images/remotes/${remote.model}.webp`}
+            src={`/images/remotes/${remote.model}.png`}
             alt={`Mando ${remote.model}`}
             className="max-h-64 w-auto object-contain rounded-xl"
             onError={(e) => e.target.style.display = 'none'}
@@ -183,7 +183,7 @@ export function SpecMobile() {
             {remote && (
               <div className="mt-4 flex flex-col items-center gap-2">
                 <img
-                  src={`/images/remotes/${remote.model}.webp`}
+                  src={`/images/remotes/${remote.model}.png`}
                   alt={`Mando ${remote.model}`}
                   className="max-h-48 w-auto object-contain rounded-xl"
                   onError={(e) => e.target.style.display = 'none'}
