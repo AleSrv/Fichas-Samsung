@@ -1,85 +1,77 @@
-<!-- image -->
-
-<!-- image -->
-
 ## Tu estilo en movimiento
-
-<!-- image -->
-
-## Tu estilo, donde quieras
 
 ## Pantalla portátil
 
 Hasta 3 horas de batería integrada. Llévate The Movingstyle donde quieras.
 
-<!-- image -->
+## Tu estilo, interactivo
 
-## Tu estilo,
-
-interactivo Contrólalo directamente con el dedo, tu voz o con gestos. Así de sencillo. Táctil e inteligente
-
-<!-- image -->
-
-## Tu estilo, como quieras
+Contrólalo directamente con el dedo, tu voz o con gestos. Así de sencillo. Táctil e inteligente.
 
 ## Peana desmontable
 
 Con peana o sin ella, en horizontal o vertical, tu eliges cómo quieres verlo.
 
-<!-- image -->
-
-<!-- image -->
-
-## Tu estilo, personalizado
-
 ## Se adapta a ti
 
 Se adapta a tu estilo de vida mostrándote en pantalla lo que te interesa, incluso apagado.
 
-<!-- image -->
+| Característica | Especificación |
+|---|---|
+| Resolución | QHD (2.560 x 1.440) |
+| HDR (High Dynamic Range) | HDR |
+| Ratio de refresco | 120Hz |
+| ColorBooster | ColorBooster Pro |
+| HDR10+ | Yes (ADAPTIVE) |
+| Auto HDR Remastering | Sí |
+| Picture Engine | NQ4 AI Gen2 Processor |
+| Ángulo de Visión | Wide Viewing Angle |
+| Micro Dimming | Micro Dimming Pro |
+| Contrast Enhancer | Real Depth Enhancer |
+| Eye Comfort Mode | Sí |
+| Eco Sensor | Sí |
+| Dolby Atmos | Sí |
+| Potencia | 10W |
+| Altavoces | 2CH |
+| Q-Symphony | Sí |
+| OTS (Object Tracking Sound) | OTS Lite |
+| AVA (Active Voice Amplifier) | Pro |
+| Adaptive Sound | Pro |
+| Audio 360 | Sí |
+| Motion Technology | Motion Xcelerator 120Hz |
+| Super UltraWide Game View | Sí |
+| Gaming Hub | Sí |
+| Auto Game Mode (ALLM) | Sí |
+| Game Motion Plus | Sí |
+| Smart TV Powered by Tizen | Tizen |
+| Multi-View | Hasta 2 vídeos |
+| Asistente de voz integrado | Bixby y Alexa |
+| Asistente de voz compatible | Alexa y Google |
+| Far-Field Voice Interaction | Sí |
+| Apple AirPlay | Sí |
+| Samsung TV Plus | Sí |
+| Universal Guide | Sí |
+| Multi Device Experience | Móvil a TV, TV initiate mirroring, Sound Mirroring |
+| Wireless TV On | Sí |
+| SmartThings | Integrado |
+| Quick Remote | Sí |
+| Samsung Knox Security | Sí |
+| Conectividad WiFi / Bluetooth | WiFi 5 / BT 5.3 |
+| HDMI | 1 (QHD 120Hz; eARC) |
+| USB | 2 x USB-C |
+| Diseño | Pantalla portátil y táctil |
+| Tipo de peana | Desmontable |
+| Art Store | Sí |
+| Color | Blanco |
+| Click to Search | Sí |
+| Generative Wallpaper | Sí |
 
-<!-- image -->
+## Mando a distancia
 
-<!-- image -->
+Carga solar y USB-C. Compatible con Slim Fit Cam.
 
-<!-- image -->
+## Tamaño
 
-<!-- image -->
-
-| Resolución                       | QHD(2,560 x1,440)      |                           | Diseño                     | Pantalla portátil ytáctil                          |
-|----------------------------------|------------------------|---------------------------|----------------------------|----------------------------------------------------|
-| HDR(High Dynamic Range)          | HDR                    |                           | Tipo de peana              | Desmontable                                        |
-| Ratio de refresco                | 120Hz                  |                           | Art Store                  | Sí                                                 |
-| ColorBooster                     | ColorBoosterPro        |                           | Color                      | Blanco                                             |
-| HDR10+                           | Yes (ADAPTIVE)         |                           |                            |                                                    |
-| Auto HDRRemastering              | Auto HDRRemastering    | Vision AI                 | Click to Search            | Sí                                                 |
-| Picture Engine                   | NQ4AI Gen2 Processor   | Vision AI                 | GenerativeWallpaper        | Sí                                                 |
-| Ángulo deVisión                  | WideViewing Angle      | Vision AI                 |                            |                                                    |
-| Micro Dimming                    | Micro Dimming Pro      | Smart TV Powered by Tizen | Multi-View                 | Hasta 2 vídeos                                     |
-| Contrast Enhancer                | Real Depth Enhancer    | Smart TV Powered by Tizen | Asistente devoz integrado  | BixbyyAlexa                                        |
-| EyeComfortMode                   | Sí                     | Smart TV Powered by Tizen | Asistente devoz Compatible | Alexa y Google                                     |
-| Eco Sensor                       | Sí                     | Smart TV Powered by Tizen | Far-FieldVoice Interaction | Sí                                                 |
-|                                  |                        | Smart TV Powered by Tizen | AppleAirPlay               | Sí                                                 |
-| DolbyAtmos                       | Sí                     | Smart TV Powered by Tizen | Samsung TVPlus             | Sí                                                 |
-| Potencia                         | 10W                    | Smart TV Powered by Tizen | Universal Guide            | Sí                                                 |
-| Altavoces                        | 2CH                    | Smart TV Powered by Tizen | Multi Device Experience    | Móvil a TV, TVinitiate mirroring, Sound Mirroring, |
-| Q-Symphony                       | Sí                     | Smart TV Powered by Tizen |                            | WirelessTVOn                                       |
-| OTS (Object Tracking Sound)      | OTS Lite               | Smart TV Powered by Tizen | SmartThings                | Integrado                                          |
-| AVA(ActiveVoiceAmplifier)        | Pro                    | Smart TV Powered by Tizen | Quick Remote               | Sí                                                 |
-| Adaptive Sound                   | Pro                    | Smart TV Powered by Tizen | Samsung Knox Security      | Sí                                                 |
-| Audio 360                        | Sí                     | Smart TV Powered by Tizen |                            |                                                    |
-|                                  |                        | Conectividad              | WiFi/Bluetooth             | WiFi 5 / BT5.3                                     |
-| Motion Technology                | Motion Xcelerator120Hz | Conectividad              | HDMI                       | 1 (QHD120Hz; eARC)                                 |
-| SuperUltraWideGameView GamingHub | Sí Sí                  | Conectividad              | USB                        | 2 x USB-C                                          |
-| AutoGameMode(ALLM)               | Sí                     | Accesorios                | Modelomando                | TM2561E                                            |
-| GameMotionPlus                   | Sí                     | Accesorios                | Cámara Slim Fit            | Compatible                                         |
-
-<!-- image -->
-
-<!-- image -->
-
-| TheMovingstyle   | TheMovingstyle   | TheMovingstyle   | TheMovingstyle   | TheMovingstyle            | TheMovingstyle                   | TheMovingstyle                   | TheMovingstyle   |
-|------------------|------------------|------------------|------------------|---------------------------|----------------------------------|----------------------------------|------------------|
-| MODELO           | Cms. Pulgadas    | Peso(kg.)        | Peso(kg.)        | Peso(kg.)                 | Dimensiones(AnchoxAltoxFondomm.) | Dimensiones(AnchoxAltoxFondomm.) |                  |
-| MODELO           | Cms. Pulgadas    | Sin stand        | Con Stand        | Sin peana Con Caja        | Con peana                        | Con caja                         |                  |
-| UE27LSM7FAXXXE   | 27'              | 5.2              | 25.7             | 628.3 x 368.2 x 47.4 30.3 | 628.3 x1272.3 x 409              | 1234 x174 x 525                  |                  |
+| Modelo | Pulgadas | Peso sin peana (kg) | Peso con caja (kg) | Dimensiones con peana (mm) | Dimensiones sin peana (mm) | Dimensiones con caja (mm) |
+|---|---|---|---|---|---|---|
+| UE27LSM7FAXXXE | 27'' | 5,2 | 25,7 | 628,3 x 1.272,3 x 409 | 628,3 x 368,2 x 47,4 | 1.234 x 174 x 525 |
