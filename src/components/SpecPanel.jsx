@@ -35,7 +35,7 @@ export function SpecTOC() {
   if (sections.length === 0) return null
 
   return (
-    <nav className="flex flex-col gap-0.5 p-3">
+    <nav className="flex flex-col gap-0.5 p-3 pr-5">
       {sections.map((s) => (
         <button
           key={s.id}
