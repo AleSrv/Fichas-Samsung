@@ -1,25 +1,11 @@
 ## Tu estilo en movimiento
 
-## Pantalla portátil
-
-Hasta 3 horas de batería integrada. Llévate The Movingstyle donde quieras.
-
-## Tu estilo, interactivo
-
-Contrólalo directamente con el dedo, tu voz o con gestos. Así de sencillo. Táctil e inteligente.
-
-## Peana desmontable
-
-Con peana o sin ella, en horizontal o vertical, tu eliges cómo quieres verlo.
-
-## Se adapta a ti
-
-Se adapta a tu estilo de vida mostrándote en pantalla lo que te interesa, incluso apagado.
+Pantalla portátil con hasta 3 horas de batería integrada. Contrólalo con el dedo, tu voz o con gestos. Táctil e inteligente. Peana desmontable para uso en horizontal o vertical. Se adapta a tu estilo de vida mostrándote en pantalla lo que te interesa, incluso apagado.
 
 | Característica | Especificación |
 |---|---|
 | Resolución | QHD (2.560 x 1.440) |
-| HDR (High Dynamic Range) | HDR |
+| HDR | HDR |
 | Ratio de refresco | 120Hz |
 | ColorBooster | ColorBooster Pro |
 | HDR10+ | Yes (ADAPTIVE) |
@@ -43,10 +29,9 @@ Se adapta a tu estilo de vida mostrándote en pantalla lo que te interesa, inclu
 | Gaming Hub | Sí |
 | Auto Game Mode (ALLM) | Sí |
 | Game Motion Plus | Sí |
-| Smart TV Powered by Tizen | Tizen |
+| Smart TV | Tizen |
 | Multi-View | Hasta 2 vídeos |
 | Asistente de voz integrado | Bixby y Alexa |
-| Asistente de voz compatible | Alexa y Google |
 | Far-Field Voice Interaction | Sí |
 | Apple AirPlay | Sí |
 | Samsung TV Plus | Sí |
