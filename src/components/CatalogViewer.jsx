@@ -331,14 +331,14 @@ export default function CatalogViewer({ catalog }) {
           </div>
         </header>
 
-        <div className="hidden lg:flex shrink-0 items-center gap-1 border-b border-white/5 overflow-x-auto no-scrollbar bg-surface/40">
-          <SpecTOC horizontal />
-        </div>
-
         <div className="flex-1 flex flex-col lg:flex-row min-h-0">
+          <aside className="hidden lg:flex flex-col w-48 shrink-0 border-r border-white/5 overflow-y-auto bg-surface/40">
+            <SpecTOC />
+          </aside>
+
           <div
             ref={containerRef}
-            className="flex-1 flex items-center overflow-hidden relative select-none p-4 lg:py-8 lg:pr-3 lg:pl-1"
+            className="flex-1 flex items-center overflow-hidden relative select-none p-4 lg:py-8 lg:pr-3 lg:pl-3"
             onPointerDown={handlePointerDown}
             onPointerMove={handlePointerMove}
             onPointerUp={handlePointerUp}
@@ -347,7 +347,7 @@ export default function CatalogViewer({ catalog }) {
             style={{ touchAction: 'none', cursor: isZoomed ? 'grab' : 'default' }}
           >
             <div
-              className="relative mx-2"
+              className="relative"
               style={{
                 transform: `translate(${offset.x}px, ${offset.y}px) scale(${scale})`,
                 transition: g.current.mode ? 'none' : 'transform 0.2s ease-out',
