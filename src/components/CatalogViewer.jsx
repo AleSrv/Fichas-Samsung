@@ -347,7 +347,7 @@ export default function CatalogViewer({ catalog }) {
             style={{ touchAction: 'none', cursor: isZoomed ? 'grab' : 'default' }}
           >
             <div
-              className="relative"
+              className="relative mx-2"
               style={{
                 transform: `translate(${offset.x}px, ${offset.y}px) scale(${scale})`,
                 transition: g.current.mode ? 'none' : 'transform 0.2s ease-out',
