@@ -331,7 +331,7 @@ export default function CatalogViewer({ catalog }) {
           </div>
         </header>
 
-        <div className="flex-1 flex flex-col lg:flex-row min-h-0 lg:gap-x-4">
+        <div className="flex-1 flex flex-col lg:flex-row min-h-0 lg:gap-x-2">
           <div
             ref={containerRef}
             className="flex-1 lg:flex-none flex justify-center items-start lg:items-center overflow-hidden relative select-none p-4 lg:py-8 lg:px-3"
@@ -385,7 +385,7 @@ export default function CatalogViewer({ catalog }) {
             )}
           </div>
 
-          <aside className="hidden lg:flex flex-col w-48 shrink-0 border-l border-white/5 overflow-y-auto">
+          <aside className="hidden lg:flex flex-col w-40 shrink-0 border-l border-white/5 overflow-y-auto">
             <SpecTOC />
           </aside>
 

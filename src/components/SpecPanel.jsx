@@ -56,13 +56,13 @@ export function SpecTOC({ horizontal }) {
   }
 
   return (
-    <nav className="flex flex-col gap-0.5 p-3 pr-5">
+    <nav className="flex flex-col gap-0.5 p-2 pr-4">
       {sections.map((s) => (
         <button
           key={s.id}
           onMouseEnter={() => setHoveredId(s.id)}
           onMouseLeave={() => setHoveredId(null)}
-          className={`relative w-full text-left px-3 py-2.5 rounded-lg text-sm font-medium transition-all duration-200 cursor-pointer ${
+          className={`relative w-full text-left px-2 py-2 rounded-lg text-xs font-medium transition-all duration-200 cursor-pointer ${
             hoveredId === s.id
               ? 'bg-primary/10 text-primary shadow-[0_0_12px_rgba(192,193,255,0.08)]'
               : 'text-on-surface-variant hover:text-on-surface hover:bg-surface-high'
@@ -132,8 +132,8 @@ export function SpecContent() {
   }
 
   return (
-    <div key={active.id} className="p-4 animate-fade-up overflow-x-hidden">
-      <h3 className="text-xs uppercase tracking-widest font-semibold text-primary mb-3">{active.title}</h3>
+    <div key={active.id} className="p-3 animate-fade-up overflow-x-hidden">
+      <h3 className="text-xs uppercase tracking-widest font-semibold text-primary mb-2">{active.title}</h3>
       <MarkdownContent content={active.content} />
     </div>
   )
