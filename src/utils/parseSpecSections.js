@@ -28,8 +28,8 @@ export default function parseSpecSections(md) {
     sections.push({ id: 'detalles', title: 'Detalles', content: cleaned || '' })
   } else if (hasHeadings) {
     const last = sections[sections.length - 1]
-    last.title = 'Modelo'
-    last.id = 'modelo'
+    last.title = 'Tamaño'
+    last.id = 'tamano'
   }
 
   return sections

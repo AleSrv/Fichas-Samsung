@@ -86,7 +86,7 @@ function MarkdownContent({ content }) {
         components={{
           table: ({ children }) => (
             <div className="mb-4">
-              <table className="w-full text-xs border-collapse">{children}</table>
+              <table className="w-full text-xs border-collapse table-fixed">{children}</table>
             </div>
           ),
           tr: ({ children }) => (
