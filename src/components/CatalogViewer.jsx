@@ -222,7 +222,7 @@ export default function CatalogViewer({ catalog }) {
 
   return (
     <SpecRoot catalogId={catalog.id}>
-      <div className="flex flex-col h-full overflow-y-auto lg:overflow-hidden">
+      <div className="flex flex-col h-full">
         <header className="flex items-center px-4 py-2 bg-surface/80 backdrop-blur-lg border-b border-white/5 shrink-0 gap-2 z-20">
           <a
             href="/"
@@ -334,7 +334,7 @@ export default function CatalogViewer({ catalog }) {
         <div className="flex-1 flex flex-col lg:flex-row min-h-0">
           <div
             ref={containerRef}
-            className="flex-1 flex items-center overflow-hidden relative select-none p-4 lg:py-8 lg:px-0"
+            className="flex-1 lg:flex-none flex items-center overflow-hidden relative select-none p-4 lg:py-8 lg:px-0"
             onPointerDown={handlePointerDown}
             onPointerMove={handlePointerMove}
             onPointerUp={handlePointerUp}
@@ -394,7 +394,7 @@ export default function CatalogViewer({ catalog }) {
           </aside>
         </div>
 
-        <div className="lg:hidden shrink-0 border-t border-white/5">
+        <div className="lg:hidden shrink-0 border-t border-white/5 overflow-y-auto max-h-[35vh]">
           <SpecMobile />
         </div>
 
