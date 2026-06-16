@@ -18,8 +18,8 @@ De 2o a ioo
 
 ## The Premiere 5
 
-| MODELO   |     | Peso (kg.)   | Peso (kg.)   | Dimensiones(Ancho xAlto x Fondo mm.)   | Dimensiones(Ancho xAlto x Fondo mm.)   | Dimensiones(Ancho xAlto x Fondo mm.)   |
-|----------|-----|--------------|--------------|----------------------------------------|----------------------------------------|----------------------------------------|
-|          | EAN | Con caja     | Conpeana     | Con caja                               | Conpeana                               | Sin peana                              |
+| MODELO   | Peso (kg.)   | Peso (kg.)   | Dimensiones(Ancho xAlto x Fondo mm.)   | Dimensiones(Ancho xAlto x Fondo mm.)   | Dimensiones(Ancho xAlto x Fondo mm.)   |
+|----------|--------------|--------------|----------------------------------------|----------------------------------------|----------------------------------------|
+|          | Con caja     | Conpeana     | Con caja                               | Conpeana                               | Sin peana                              |
 
 <!-- image -->

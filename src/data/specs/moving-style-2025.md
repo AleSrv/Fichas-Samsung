@@ -78,8 +78,8 @@ Se adapta a tu estilo de vida mostrándote en pantalla lo que te interesa, inclu
 
 <!-- image -->
 
-| TheMovingstyle   | TheMovingstyle   | TheMovingstyle   | TheMovingstyle   | TheMovingstyle   | TheMovingstyle            | TheMovingstyle                   | TheMovingstyle                   | TheMovingstyle   |
-|------------------|------------------|------------------|------------------|------------------|---------------------------|----------------------------------|----------------------------------|------------------|
-| MODELO           | EAN              | Cms. Pulgadas    | Peso(kg.)        | Peso(kg.)        | Peso(kg.)                 | Dimensiones(AnchoxAltoxFondomm.) | Dimensiones(AnchoxAltoxFondomm.) |                  |
-| MODELO           | EAN              | Cms. Pulgadas    | Sin stand        | Con Stand        | Sin peana Con Caja        | Con peana                        | Con caja                         |                  |
-| UE27LSM7FAXXXE   | 8806097691679    | 27'              | 5.2              | 25.7             | 628.3 x 368.2 x 47.4 30.3 | 628.3 x1272.3 x 409              | 1234 x174 x 525                  |                  |
+| TheMovingstyle   | TheMovingstyle   | TheMovingstyle   | TheMovingstyle   | TheMovingstyle            | TheMovingstyle                   | TheMovingstyle                   | TheMovingstyle   |
+|------------------|------------------|------------------|------------------|---------------------------|----------------------------------|----------------------------------|------------------|
+| MODELO           | Cms. Pulgadas    | Peso(kg.)        | Peso(kg.)        | Peso(kg.)                 | Dimensiones(AnchoxAltoxFondomm.) | Dimensiones(AnchoxAltoxFondomm.) |                  |
+| MODELO           | Cms. Pulgadas    | Sin stand        | Con Stand        | Sin peana Con Caja        | Con peana                        | Con caja                         |                  |
+| UE27LSM7FAXXXE   | 27'              | 5.2              | 25.7             | 628.3 x 368.2 x 47.4 30.3 | 628.3 x1272.3 x 409              | 1234 x174 x 525                  |                  |
