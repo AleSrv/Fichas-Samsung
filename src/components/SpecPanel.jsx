@@ -93,13 +93,13 @@ function MarkdownContent({ content }) {
             <tr className="border-b border-white/5 even:bg-white/[0.02]">{children}</tr>
           ),
           th: ({ children }) => (
-            <th className="text-left px-3 py-2 text-on-surface-variant font-medium">{children}</th>
+            <th className="text-left px-2 py-1.5 text-on-surface-variant font-medium">{children}</th>
           ),
           td: ({ children }) => (
-            <td className="px-3 py-2 text-on-surface-variant">{children}</td>
+            <td className="px-2 py-1.5 text-on-surface-variant">{children}</td>
           ),
           h2: ({ children }) => (
-            <h2 className="text-sm font-bold text-on-surface mt-5 mb-2 pb-1 border-b border-white/5">{children}</h2>
+            <h2 className="text-xs font-bold text-on-surface mt-3 mb-1.5 pb-1 border-b border-white/5">{children}</h2>
           ),
           p: ({ children }) => {
             const text = typeof children === 'string' ? children : ''
