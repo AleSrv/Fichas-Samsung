@@ -331,10 +331,6 @@ export default function CatalogViewer({ catalog }) {
           </div>
         </header>
 
-        <div className="hidden lg:flex shrink-0 border-b border-white/5 overflow-x-auto no-scrollbar bg-surface/40">
-          <SpecTOC horizontal />
-        </div>
-
         <div className="flex-1 flex flex-col lg:flex-row min-h-0">
           <div
             ref={containerRef}
@@ -388,6 +384,10 @@ export default function CatalogViewer({ catalog }) {
               </div>
             )}
           </div>
+
+          <aside className="hidden lg:flex flex-col w-48 shrink-0 border-l border-white/5 overflow-y-auto">
+            <SpecTOC />
+          </aside>
 
           <aside className="hidden lg:flex flex-col w-80 shrink-0 border-l border-white/5 overflow-y-auto">
             <SpecContent />
