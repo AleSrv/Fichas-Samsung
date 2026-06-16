@@ -32,8 +32,8 @@ export default function ThumbnailStrip({ images, currentPage, goTo, compact }) {
               ? 'ring-2 ring-primary shadow-lg shadow-primary/20 scale-105'
               : 'opacity-60 hover:opacity-90 hover:scale-[1.02]'
             }
+            w-12 lg:w-[60px] h-[68px] lg:h-[85px]
           `}
-          style={{ width: 60, height: 85 }}
         >
           <img
             src={src}
