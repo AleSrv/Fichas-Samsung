@@ -146,7 +146,7 @@ export function SpecContent() {
   return (
     <div key={active.id} className="p-3 animate-fade-up overflow-x-hidden" onMouseEnter={keepHover}>
       <h3 className="text-xs uppercase tracking-widest font-semibold text-primary mb-2">{active.title}</h3>
-      <MarkdownContent content={active.content} />
+      <MarkdownContent content={remote ? `${remote.model}${remote.partNumber ? ` (${remote.partNumber})` : ''} — ${remote.description}\n\n${active.content}` : active.content} />
       {remote && (
         <div className="mt-4 flex flex-col items-center gap-2">
           <img
@@ -155,9 +155,6 @@ export function SpecContent() {
             className="max-h-64 w-auto object-contain rounded-xl"
             onError={(e) => e.target.style.display = 'none'}
           />
-          <p className="text-xs text-outline text-center">
-            {remote.model}{remote.partNumber ? ` (${remote.partNumber}) — ` : ' — '}{remote.description}
-          </p>
         </div>
       )}
     </div>
@@ -182,7 +179,7 @@ export function SpecMobile() {
         return (
           <section key={s.id} className="p-4">
             <h3 className="text-xs uppercase tracking-widest font-semibold text-primary mb-3">{s.title}</h3>
-            <MarkdownContent content={s.content} />
+            <MarkdownContent content={remote ? `${remote.model}${remote.partNumber ? ` (${remote.partNumber})` : ''} — ${remote.description}\n\n${s.content}` : s.content} />
             {remote && (
               <div className="mt-4 flex flex-col items-center gap-2">
                 <img
@@ -191,9 +188,6 @@ export function SpecMobile() {
                   className="max-h-48 w-auto object-contain rounded-xl"
                   onError={(e) => e.target.style.display = 'none'}
                 />
-                <p className="text-xs text-outline text-center">
-                  {remote.model}{remote.partNumber ? ` (${remote.partNumber}) — ` : ' — '}{remote.description}
-                </p>
               </div>
             )}
           </section>
