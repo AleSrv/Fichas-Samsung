@@ -155,9 +155,9 @@ export function SpecContent() {
             className="max-h-64 w-auto object-contain rounded-xl"
             onError={(e) => e.target.style.display = 'none'}
           />
-          {remote.description && (
-            <p className="text-xs text-outline text-center">{remote.description}</p>
-          )}
+          <p className="text-xs text-outline text-center">
+            {remote.model}{remote.partNumber ? ` (${remote.partNumber}) — ` : ' — '}{remote.description}
+          </p>
         </div>
       )}
     </div>
@@ -191,9 +191,9 @@ export function SpecMobile() {
                   className="max-h-48 w-auto object-contain rounded-xl"
                   onError={(e) => e.target.style.display = 'none'}
                 />
-                {remote.description && (
-                  <p className="text-xs text-outline text-center">{remote.description}</p>
-                )}
+                <p className="text-xs text-outline text-center">
+                  {remote.model}{remote.partNumber ? ` (${remote.partNumber}) — ` : ' — '}{remote.description}
+                </p>
               </div>
             )}
           </section>
