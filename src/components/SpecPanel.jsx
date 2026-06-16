@@ -93,7 +93,7 @@ function MarkdownContent({ content }) {
             <tr className="border-b border-white/5 even:bg-white/[0.02]">{children}</tr>
           ),
           th: ({ children }) => (
-            <th className="text-left px-3 py-2 font-semibold text-primary whitespace-nowrap">{children}</th>
+            <th className="text-left px-3 py-2 text-on-surface-variant font-medium whitespace-nowrap">{children}</th>
           ),
           td: ({ children }) => (
             <td className="px-3 py-2 text-on-surface-variant whitespace-nowrap">{children}</td>
