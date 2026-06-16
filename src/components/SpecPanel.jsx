@@ -85,7 +85,7 @@ function MarkdownContent({ content }) {
         remarkPlugins={[remarkGfm]}
         components={{
           table: ({ children }) => (
-            <div className="overflow-x-auto mb-4">
+            <div className="mb-4">
               <table className="w-full text-xs border-collapse">{children}</table>
             </div>
           ),
@@ -93,10 +93,10 @@ function MarkdownContent({ content }) {
             <tr className="border-b border-white/5 even:bg-white/[0.02]">{children}</tr>
           ),
           th: ({ children }) => (
-            <th className="text-left px-3 py-2 text-on-surface-variant font-medium whitespace-nowrap">{children}</th>
+            <th className="text-left px-3 py-2 text-on-surface-variant font-medium">{children}</th>
           ),
           td: ({ children }) => (
-            <td className="px-3 py-2 text-on-surface-variant whitespace-nowrap">{children}</td>
+            <td className="px-3 py-2 text-on-surface-variant">{children}</td>
           ),
           h2: ({ children }) => (
             <h2 className="text-sm font-bold text-on-surface mt-5 mb-2 pb-1 border-b border-white/5">{children}</h2>
@@ -132,7 +132,7 @@ export function SpecContent() {
   }
 
   return (
-    <div key={active.id} className="p-4 animate-fade-up">
+    <div key={active.id} className="p-4 animate-fade-up overflow-x-hidden">
       <h3 className="text-xs uppercase tracking-widest font-semibold text-primary mb-3">{active.title}</h3>
       <MarkdownContent content={active.content} />
     </div>
