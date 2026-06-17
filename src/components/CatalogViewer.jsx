@@ -325,15 +325,6 @@ export default function CatalogViewer({ catalog }) {
               )}
             </div>
 
-            <button
-              onClick={toggleFullscreen}
-              className="p-2 rounded-lg hover:bg-surface-high transition-colors text-on-surface-variant hover:text-on-surface"
-              title={fullscreen ? 'Salir de pantalla completa' : 'Pantalla completa'}
-            >
-              <span className="material-symbols-outlined">
-                {fullscreen ? 'fullscreen_exit' : 'fullscreen'}
-              </span>
-            </button>
           </div>
         </header>
 
@@ -363,10 +354,11 @@ export default function CatalogViewer({ catalog }) {
               />
               <button
                 onClick={(e) => { e.stopPropagation(); setLightboxOpen(true) }}
-                className="absolute bottom-3 right-3 w-8 h-8 rounded-full bg-black/40 backdrop-blur-sm border border-white/10 flex items-center justify-center hover:bg-black/60 transition-colors cursor-pointer lg:opacity-60 hover:opacity-100 z-10"
+                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-black/50 backdrop-blur-sm border border-white/20 flex items-center justify-center hover:bg-black/70 transition-all duration-200 cursor-pointer hover:scale-110 z-10"
+                style={{ touchAction: 'auto' }}
                 title="Ampliar"
               >
-                <span className="material-symbols-outlined text-white text-base">zoom_in</span>
+                <span className="material-symbols-outlined text-white text-xl">zoom_in</span>
               </button>
             </div>
 
