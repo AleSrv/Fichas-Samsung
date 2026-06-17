@@ -80,11 +80,12 @@ Remote Control SolarCell TM2360E incluido
 | Sonido inteligente | Sonido surround | Fina y potente |
 | HW-Q990F | HW-QS750F | HW-S800D |
 
-## MR95F
+## Tamaño
 
-| MODELO | Pulgadas | Cms. | Peso (kg.) Sin peana | Peso (kg.) Con peana | Peso (kg.) Con caja | Dimensión peana | Dimensiones (Ancho x Alto x Fondo mm.) Sin peana | Dimensiones (Ancho x Alto x Fondo mm.) Con peana | Dimensiones (Ancho x Alto x Fondo mm.) Con caja | Soporte pared VESA compatible |
-|---|---|---|---|---|---|---|---|---|---|
-| MNA114MS1CCXXE | 114' | - | 88.0 | - | 187.0 | 471 x 410.6 | 2526.3 x 1434.2 x 24.9 | - | 2760 x 1776 x 770 | - |
-| MNA89MS1BACXXE | 89' | - | 53.0 | - | 122.0 | 471 x 410.6 | 1965.5 x 1117.3 x 24.9 | - | 2145 x 1400 x 770 | - |
-| MNA76MS1CACXXE | 76' | - | 41.0 | 41.0 | 56.4 | 471 x 410.6 | 1685.1 x 958.7 x 24.9 | - | 1843 x 1107 x 226 | - |
+|                | Pulgadas   |   Cms. | Peso (kg.)   | Peso (kg.)   | Peso (kg.)   | Dimensión peana   | Dimensiones (Ancho x Alto x Fondo mm.)   | Dimensiones (Ancho x Alto x Fondo mm.)   | Dimensiones (Ancho x Alto x Fondo mm.)   | Soporte pared   |
+|----------------|------------|--------|--------------|--------------|--------------|-------------------|------------------------------------------|------------------------------------------|------------------------------------------|-----------------|
+| MODELO         |            |        | Sin peana    | Con peana    | Con caja     | Dimensión peana   | Sin peana                                | Con peana                                | Con caja                                 | VESA compatible |
+| MNA114MS1CCXXE | 114'       |    289 | 88.0         | -            | 187.0        | 471 x 410.6       | 2526.3 x 1434.2 x 24.9                   | -                                        | 2760 x 1776 x 770                        | -               |
+| MNA89MS1BACXXE | 89'        |    226 | 53.0         | -            | 122.0        | 471 x 410.6       | 1965.5 x 1117.3 x 24.9                   | -                                        | 2145 x 1400 x 770                        | -               |
+| MNA76MS1CACXXE | 75'        |    191 | 41.0         | 41.0         | 56.4         | 471 x 410.6       | 1685.1 x 958.7 x 24.9                    | -                                        | 1843 x 1107 x 226                        | 600x400         |
 
