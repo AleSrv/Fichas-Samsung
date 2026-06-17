@@ -1,38 +1,67 @@
-## Tu estilo en movimiento
-
-Pantalla portátil con hasta 3 horas de batería integrada. Contrólalo con el dedo, tu voz o con gestos. Táctil e inteligente. Peana desmontable para uso en horizontal o vertical. Se adapta a tu estilo de vida mostrándote en pantalla lo que te interesa, incluso apagado.
+## Imagen
 
 | Característica | Especificación |
 |---|---|
 | Resolución | QHD (2.560 x 1.440) |
 | HDR | HDR |
-| Ratio de refresco | 120Hz |
-| ColorBooster | ColorBooster Pro |
-| HDR10+ | Yes (ADAPTIVE) |
+| HDR10+ | Sí (Adaptive) |
 | Auto HDR Remastering | Sí |
-| Picture Engine | NQ4 AI Gen2 Processor |
-| Ángulo de Visión | Wide Viewing Angle |
+| Procesador | NQ4 AI Gen2 Processor |
+| Ángulo de visión | Wide Viewing Angle |
 | Micro Dimming | Micro Dimming Pro |
 | Contrast Enhancer | Real Depth Enhancer |
+| Color Booster | Color Booster Pro |
 | Eye Comfort Mode | Sí |
 | Eco Sensor | Sí |
+
+## Sonido
+
+| Característica | Especificación |
+|---|---|
 | Dolby Atmos | Sí |
 | Potencia | 10W |
 | Altavoces | 2CH |
 | Q-Symphony | Sí |
-| OTS (Object Tracking Sound) | OTS Lite |
-| AVA (Active Voice Amplifier) | Pro |
+| OTS | OTS Lite |
+| Active Voice Amplifier | Pro |
 | Adaptive Sound | Pro |
 | Audio 360 | Sí |
+
+## Gaming
+
+| Característica | Especificación |
+|---|---|
 | Motion Technology | Motion Xcelerator 120Hz |
 | Super UltraWide Game View | Sí |
 | Gaming Hub | Sí |
 | Auto Game Mode (ALLM) | Sí |
 | Game Motion Plus | Sí |
-| Smart TV | Tizen |
-| Multi-View | Hasta 2 vídeos |
+
+## Diseño
+
+| Característica | Especificación |
+|---|---|
+| Diseño | Pantalla portátil y táctil |
+| Tipo de peana | Desmontable |
+| Color | Blanco |
+| Art Store | Sí |
+
+## Vision AI
+
+| Característica | Especificación |
+|---|---|
 | Asistente de voz integrado | Bixby y Alexa |
 | Far-Field Voice Interaction | Sí |
+| Samsung Knox Security | Sí |
+| Click to Search | Sí |
+| Generative Wallpaper | Sí |
+
+## Smart TV
+
+| Característica | Especificación |
+|---|---|
+| Sistema operativo | Tizen |
+| Multi-View | Hasta 2 vídeos |
 | Apple AirPlay | Sí |
 | Samsung TV Plus | Sí |
 | Universal Guide | Sí |
@@ -40,20 +69,20 @@ Pantalla portátil con hasta 3 horas de batería integrada. Contrólalo con el d
 | Wireless TV On | Sí |
 | SmartThings | Integrado |
 | Quick Remote | Sí |
-| Samsung Knox Security | Sí |
-| Conectividad WiFi / Bluetooth | WiFi 5 / BT 5.3 |
-| HDMI | 1 (QHD 120Hz; eARC) |
+
+## Conectividad
+
+| Característica | Especificación |
+|---|---|
+| WiFi / Bluetooth | WiFi 5 / BT 5.3 |
+| HDMI | 1 (QHD 120Hz, eARC) |
 | USB | 2 x USB-C |
-| Diseño | Pantalla portátil y táctil |
-| Tipo de peana | Desmontable |
-| Art Store | Sí |
-| Color | Blanco |
-| Click to Search | Sí |
-| Generative Wallpaper | Sí |
 
 ## Accesorios
 
-Carga solar y USB-C. Compatible con Slim Fit Cam.
+Carga solar y USB-C
+
+Compatible con Slim Fit Cam
 
 ## Tamaño
 
