@@ -7,7 +7,6 @@ export default function CatalogViewer({ catalog }) {
   const images = catalog.images
   const title = catalog.title
   const [currentPage, setCurrentPage] = useState(1)
-  const [fullscreen, setFullscreen] = useState(false)
   const [scale, setScale] = useState(1)
   const [offset, setOffset] = useState({ x: 0, y: 0 })
   const [showShareMenu, setShowShareMenu] = useState(false)
@@ -77,20 +76,6 @@ export default function CatalogViewer({ catalog }) {
     }
     document.addEventListener('mousedown', handler)
     return () => document.removeEventListener('mousedown', handler)
-  }, [])
-
-  const toggleFullscreen = async () => {
-    if (!document.fullscreenElement) {
-      await document.documentElement.requestFullscreen()
-    } else {
-      await document.exitFullscreen()
-    }
-  }
-
-  useEffect(() => {
-    const handler = () => setFullscreen(!!document.fullscreenElement)
-    document.addEventListener('fullscreenchange', handler)
-    return () => document.removeEventListener('fullscreenchange', handler)
   }, [])
 
   const dist = (a, b) => Math.hypot(a.x - b.x, a.y - b.y)
