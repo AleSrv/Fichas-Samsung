@@ -29,6 +29,8 @@ export default function CatalogViewer({ catalog }) {
     clickY: 0,
   })
 
+  const lb = useRef({ startX: 0, startY: 0, moved: false })
+
   const goTo = useCallback((page) => {
     setCurrentPage(Math.max(1, Math.min(page, totalPages)))
   }, [totalPages])
@@ -202,6 +204,30 @@ export default function CatalogViewer({ catalog }) {
   const handleZoomReset = () => { setScale(1); setOffset({ x: 0, y: 0 }) }
   const handleDoubleClick = () => {
     setLightboxOpen(true)
+  }
+
+  const handleLbPointerDown = (e) => {
+    lb.current.startX = e.clientX
+    lb.current.startY = e.clientY
+    lb.current.moved = false
+  }
+
+  const handleLbPointerMove = (e) => {
+    const dx = e.clientX - lb.current.startX
+    const dy = e.clientY - lb.current.startY
+    if (Math.abs(dx) > 3 || Math.abs(dy) > 3) lb.current.moved = true
+  }
+
+  const handleLbPointerUp = (e) => {
+    if (!lb.current.moved) {
+      if (e.target === e.currentTarget) setLightboxOpen(false)
+      return
+    }
+    const dx = e.clientX - lb.current.startX
+    if (Math.abs(dx) > 60) {
+      if (dx > 0 && currentPage > 1) goTo(currentPage - 1)
+      else if (dx < 0 && currentPage < totalPages) goTo(currentPage + 1)
+    }
   }
 
   const imgSrc = images[currentPage - 1]
@@ -382,21 +408,54 @@ export default function CatalogViewer({ catalog }) {
 
       {lightboxOpen && (
         <div
-          className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center"
-          onClick={() => setLightboxOpen(false)}
+          className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center select-none"
+          onPointerDown={handleLbPointerDown}
+          onPointerMove={handleLbPointerMove}
+          onPointerUp={handleLbPointerUp}
+          onPointerCancel={() => { lb.current.moved = false }}
         >
           <button
             onClick={() => setLightboxOpen(false)}
+            onPointerDown={(e) => e.stopPropagation()}
+            onPointerUp={(e) => e.stopPropagation()}
             className="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors cursor-pointer z-10"
           >
             <span className="material-symbols-outlined text-white text-xl">close</span>
           </button>
+
+          <div
+            className="absolute top-4 left-1/2 -translate-x-1/2 px-3 py-1.5 rounded-full bg-black/50 backdrop-blur-sm text-white/80 text-sm font-medium z-10 pointer-events-none"
+          >
+            {currentPage} / {totalPages}
+          </div>
+
+          {currentPage > 1 && (
+            <button
+              onClick={(e) => { e.stopPropagation(); goTo(currentPage - 1) }}
+              onPointerDown={(e) => e.stopPropagation()}
+              onPointerUp={(e) => e.stopPropagation()}
+              className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors cursor-pointer z-10"
+            >
+              <span className="material-symbols-outlined text-white text-2xl">chevron_left</span>
+            </button>
+          )}
+
+          {currentPage < totalPages && (
+            <button
+              onClick={(e) => { e.stopPropagation(); goTo(currentPage + 1) }}
+              onPointerDown={(e) => e.stopPropagation()}
+              onPointerUp={(e) => e.stopPropagation()}
+              className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors cursor-pointer z-10"
+            >
+              <span className="material-symbols-outlined text-white text-2xl">chevron_right</span>
+            </button>
+          )}
+
           <img
             src={imgSrc}
             alt={`Página ${currentPage}`}
-            className="max-h-screen max-w-[95vw] object-contain"
+            className="max-h-screen max-w-[95vw] object-contain select-none"
             draggable={false}
-            onClick={(e) => e.stopPropagation()}
           />
         </div>
       )}
