@@ -73,7 +73,6 @@
 
 Remote Control SolarCell TM2360E incluido
 
-## Encuentra la pareja perfecta para tu TV
 
 |  |  |  |
 |---|---|---|
@@ -88,3 +87,4 @@ Remote Control SolarCell TM2360E incluido
 | MNA114MS1CCXXE | 114' | - | 88.0 | - | 187.0 | 471 x 410.6 | 2526.3 x 1434.2 x 24.9 | - | 2760 x 1776 x 770 | - |
 | MNA89MS1BACXXE | 89' | - | 53.0 | - | 122.0 | 471 x 410.6 | 1965.5 x 1117.3 x 24.9 | - | 2145 x 1400 x 770 | - |
 | MNA76MS1CACXXE | 76' | - | 41.0 | 41.0 | 56.4 | 471 x 410.6 | 1685.1 x 958.7 x 24.9 | - | 1843 x 1107 x 226 | - |
+
