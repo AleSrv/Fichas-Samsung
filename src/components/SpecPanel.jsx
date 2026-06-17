@@ -146,16 +146,22 @@ export function SpecContent() {
   return (
     <div key={active.id} className="p-3 animate-fade-up overflow-x-hidden" onMouseEnter={keepHover}>
       <h3 className="text-xs uppercase tracking-widest font-semibold text-primary mb-2">{active.title}</h3>
-      <MarkdownContent content={remote ? `Mando\n${remote.model}${remote.partNumber ? ` (${remote.partNumber})` : ''} — ${remote.description}\n\n${active.content}` : active.content} />
-      {remote && (
-        <div className="mt-4 flex flex-col items-center gap-2">
-          <img
-            src={`/images/remotes/${remote.model}.png`}
-            alt={`Mando ${remote.model}`}
-            className="max-h-64 w-auto object-contain rounded-xl"
-            onError={(e) => e.target.style.display = 'none'}
-          />
-        </div>
+      {remote ? (
+        <>
+          <p className="text-xs font-semibold text-on-surface mb-0.5">Mando</p>
+          <p className="text-xs text-outline mb-3">{remote.model}{remote.partNumber ? ` (${remote.partNumber})` : ''} — {remote.description}</p>
+          <div className="mb-4 flex flex-col items-center gap-2">
+            <img
+              src={`/images/remotes/${remote.model}.png`}
+              alt={`Mando ${remote.model}`}
+              className="max-h-48 w-auto object-contain rounded-xl"
+              onError={(e) => e.target.style.display = 'none'}
+            />
+          </div>
+          <MarkdownContent content={active.content} />
+        </>
+      ) : (
+        <MarkdownContent content={active.content} />
       )}
     </div>
   )
@@ -179,16 +185,22 @@ export function SpecMobile() {
         return (
           <section key={s.id} className="p-4">
             <h3 className="text-xs uppercase tracking-widest font-semibold text-primary mb-3">{s.title}</h3>
-            <MarkdownContent content={remote ? `Mando\n${remote.model}${remote.partNumber ? ` (${remote.partNumber})` : ''} — ${remote.description}\n\n${s.content}` : s.content} />
-            {remote && (
-              <div className="mt-4 flex flex-col items-center gap-2">
-                <img
-                  src={`/images/remotes/${remote.model}.png`}
-                  alt={`Mando ${remote.model}`}
-                  className="max-h-48 w-auto object-contain rounded-xl"
-                  onError={(e) => e.target.style.display = 'none'}
-                />
-              </div>
+            {remote ? (
+              <>
+                <p className="text-xs font-semibold text-on-surface mb-0.5">Mando</p>
+                <p className="text-xs text-outline mb-3">{remote.model}{remote.partNumber ? ` (${remote.partNumber})` : ''} — {remote.description}</p>
+                <div className="mb-4 flex flex-col items-center gap-2">
+                  <img
+                    src={`/images/remotes/${remote.model}.png`}
+                    alt={`Mando ${remote.model}`}
+                    className="max-h-40 w-auto object-contain rounded-xl"
+                    onError={(e) => e.target.style.display = 'none'}
+                  />
+                </div>
+                <MarkdownContent content={s.content} />
+              </>
+            ) : (
+              <MarkdownContent content={s.content} />
             )}
           </section>
         )

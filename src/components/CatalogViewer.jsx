@@ -429,34 +429,36 @@ export default function CatalogViewer({ catalog }) {
             {currentPage} / {totalPages}
           </div>
 
-          {currentPage > 1 && (
-            <button
-              onClick={(e) => { e.stopPropagation(); goTo(currentPage - 1) }}
-              onPointerDown={(e) => e.stopPropagation()}
-              onPointerUp={(e) => e.stopPropagation()}
-              className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors cursor-pointer z-10"
-            >
-              <span className="material-symbols-outlined text-white text-2xl">chevron_left</span>
-            </button>
-          )}
+          <div className="relative max-h-screen max-w-[95vw]">
+            {currentPage > 1 && (
+              <button
+                onClick={(e) => { e.stopPropagation(); goTo(currentPage - 1) }}
+                onPointerDown={(e) => e.stopPropagation()}
+                onPointerUp={(e) => e.stopPropagation()}
+                className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors cursor-pointer z-10"
+              >
+                <span className="material-symbols-outlined text-white text-xl">chevron_left</span>
+              </button>
+            )}
 
-          {currentPage < totalPages && (
-            <button
-              onClick={(e) => { e.stopPropagation(); goTo(currentPage + 1) }}
-              onPointerDown={(e) => e.stopPropagation()}
-              onPointerUp={(e) => e.stopPropagation()}
-              className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors cursor-pointer z-10"
-            >
-              <span className="material-symbols-outlined text-white text-2xl">chevron_right</span>
-            </button>
-          )}
+            <img
+              src={imgSrc}
+              alt={`Página ${currentPage}`}
+              className="max-h-screen max-w-[95vw] object-contain select-none"
+              draggable={false}
+            />
 
-          <img
-            src={imgSrc}
-            alt={`Página ${currentPage}`}
-            className="max-h-screen max-w-[95vw] object-contain select-none"
-            draggable={false}
-          />
+            {currentPage < totalPages && (
+              <button
+                onClick={(e) => { e.stopPropagation(); goTo(currentPage + 1) }}
+                onPointerDown={(e) => e.stopPropagation()}
+                onPointerUp={(e) => e.stopPropagation()}
+                className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors cursor-pointer z-10"
+              >
+                <span className="material-symbols-outlined text-white text-xl">chevron_right</span>
+              </button>
+            )}
+          </div>
         </div>
       )}
     </SpecRoot>
