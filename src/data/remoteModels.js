@@ -21,6 +21,7 @@ const remoteModels = {
   'the-frame-pro-2026': { model: 'TM2661H', partNumber: 'BN59-01520F', description: 'SolarCell (White)' },
   'u7005h-2026':     { model: 'TM1240A', partNumber: 'BN59-01483C', description: 'Standard (Black)' },
   'h5005f-2026':     { model: 'TM1240A', partNumber: 'BN59-01483C', description: 'Standard (Black)' },
+  'f6005f-2026':     { model: 'TM1240A', partNumber: 'BN59-01483C', description: 'Standard (Black)' },
 }
 
 export default remoteModels
