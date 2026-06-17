@@ -435,7 +435,7 @@ export default function CatalogViewer({ catalog }) {
                 onClick={(e) => { e.stopPropagation(); goTo(currentPage - 1) }}
                 onPointerDown={(e) => e.stopPropagation()}
                 onPointerUp={(e) => e.stopPropagation()}
-                className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors cursor-pointer z-10"
+                className="absolute -left-12 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors cursor-pointer z-10"
               >
                 <span className="material-symbols-outlined text-white text-xl">chevron_left</span>
               </button>
@@ -453,7 +453,7 @@ export default function CatalogViewer({ catalog }) {
                 onClick={(e) => { e.stopPropagation(); goTo(currentPage + 1) }}
                 onPointerDown={(e) => e.stopPropagation()}
                 onPointerUp={(e) => e.stopPropagation()}
-                className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors cursor-pointer z-10"
+                className="absolute -right-12 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors cursor-pointer z-10"
               >
                 <span className="material-symbols-outlined text-white text-xl">chevron_right</span>
               </button>
