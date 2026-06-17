@@ -1,110 +1,90 @@
-<!-- image -->
+## Imagen
 
-<!-- image -->
+| Característica | Especificación |
+|---|---|
+| Resolución | Micro LED |
+| Contraste | Micro Contrast |
+| HDR | MicroHDR |
+| Pantalla antirreflejos | Sí |
+| Quantum Dot | Micro Color |
+| HLG | Sí |
+| Procesador | Procesador MICRO IA |
+| Ángulo de visión | Ultra Viewing Angle |
+| Contrast Enhancer | Real Depth Enhancer |
+| Adaptive Picture | Sí |
+| Filmmaker Mode | Sí |
+| Detección de brillo/color | Sensor de brillo |
 
-<!-- image -->
+## Sonido
 
-<!-- image -->
+| Característica | Especificación |
+|---|---|
+| Dolby | Dolby Digital Plus 5.1 |
+| Potencia | 100W |
+| Altavoces | 6.2.2 Ch |
+| Q-Symphony | Sí |
+| OTS | OTS Pro |
+| Active Voice Amplifier | Sí |
+| Adaptive Sound+ | Sí |
+| Woofer | Sí |
+| Multiroom Link | Sí |
+| Bluetooth Audio | Sí |
 
-<!-- image -->
+## Gaming
 
-## MICRO LED
+| Característica | Especificación |
+|---|---|
+| Motion Technology | Motion Xcelerator Turbo+ |
+| Modo Juego Panorámico | Sí |
+| Barra de juego | Barra de juego 3.0 y Mini Map Zoom |
+| Tasa de refresco | 120 Hz |
+| FreeSync | Sí |
 
-No utiliza filtros de color ni iluminación trasera. Los LEDs, de tamaño micrométrico, son inorgánicos, autoemisivos y no se degradan con el tiempo.
+## Diseño
 
-<!-- image -->
+| Característica | Especificación |
+|---|---|
+| Diseño | Monolith Design |
+| Modo Arte | Sí (110": N/A) |
+| Ambient Mode | Ambient Mode+ |
 
-## MICRO Contraste
+## Smart TV
 
-Un nuevo nivel de profundidad y detalle gracias al micro control individual de cada píxel. Disfruta de una profundidad tridimensional.
+| Característica | Especificación |
+|---|---|
+| MultiView | Hasta 4 vídeos + Multi HDMI |
+| Asistentes de voz | Bixby y Alexa |
+| Far-Field Voice Interaction | Sí |
+| SmartThings | Sí |
+| Universal Guide | Sí |
+| Experiencia multidispositivo | TV a Móvil, Móvil a TV, Mirroring, Sound Mirroring, Wireless TV On |
+| Tap View | Sí |
 
-<!-- image -->
+## Conectividad
 
-## MICRO Color
+| Característica | Especificación |
+|---|---|
+| HDMI | 114": 8 puertos; Resto: 6 puertos |
+| USB | 2 puertos |
+| Dual Audio Bluetooth | Sí |
+| Salida de audio digital (Óptica) | Sí |
 
-Cada píxel crea de forma independiente la luz y los colores, dando un resultado mucho más puro y real a 20 bits.
+## Accesorios
 
-<!-- image -->
+Remote Control SolarCell TM2360E incluido
 
-## Arena Sound
+## Encuentra la pareja perfecta para tu TV
 
-6 altavoces y 100W de potencia te harán formar parte de la escena. El sonido 6.2.2, solo se reproduce en el lugar exacto de la acción.
-
-<!-- image -->
-
-<!-- image -->
-
-| Imagen   | Resolución                  | Micro LED                          |
-|----------|-----------------------------|------------------------------------|
-| Imagen   | Contraste                   | Micro Contrast                     |
-| Imagen   | HDR(High Dynamic Range)     | MicroHDR                           |
-| Imagen   | Pantalla Antirreflejos      | Sí                                 |
-| Imagen   | Tecnología Quantumdot       | Micro Color                        |
-| Imagen   | HLG(HybridLogGamma)         | Sí                                 |
-| Imagen   | Picture Engine              | ProcesadorMICROIA                  |
-| Imagen   | Ángulo devisión             | Ultra Viewing Angle                |
-| Imagen   | Contrast Enhancer           | Real Depth Enhancer                |
-| Imagen   | Adaptive Picture            | Sí                                 |
-| Imagen   | FilmmakerMode               | Sí                                 |
-| Imagen   | Detección de brillo / color | Sensorde brillo                    |
-|          | Dolby                       | Dolby Digital Plus 5.1             |
-|          | Potencia                    | 100W                               |
-|          | Altavoces                   | 6.2.2 Ch                           |
-|          | Q-Symphony                  | Sí                                 |
-|          | OTS (Object Tracking Sound) | OTS Pro                            |
-|          | AVA(ActiveVoiceAmplifier)   | Sí                                 |
-|          | Sonido Inteligente          | Adaptive Sound+                    |
-|          | Woofer                      | Sí                                 |
-|          | Multiroom Link              | Sí                                 |
-|          | BluetoothAudio              | Sí                                 |
-|          | Motion Technology           | Motion XceleratorTurbo+            |
-|          | ModoJuegoPanorámico         | Sí                                 |
-|          | Barra de juego              | Barra de juego 3.0 y Mini Map Zoom |
-|          | Tasa de refresco            | 120 Hz                             |
-|          | FreeSync                    | Sí                                 |
-
-<!-- image -->
-
-| Diseño                    | Diseño                             | Monolith Design                                                                          |
-|---------------------------|------------------------------------|------------------------------------------------------------------------------------------|
-| Diseño                    | ModoArte                           | ModoArte (110": N/A)                                                                     |
-| Diseño                    | AmbientMode                        | Ambient Mode+                                                                            |
-| Smart TV Powered by Tizen | MultiView Asistentes devoz         | Hasta 4vídeos + Multi HDMI Integrados y compatible: BixbyyAlexa Incluso con el TVapagado |
-| Smart TV Powered by Tizen | Far-FieldVoice Interaction         | Sí                                                                                       |
-| Smart TV Powered by Tizen | SmartThings                        | Sí                                                                                       |
-| Smart TV Powered by Tizen | Universal Guide Experiencia        | Sí TVaMóvil, Móvil a TV, IniciarMirroring en TV, Sonido                                  |
-| Smart TV Powered by Tizen | multidispositivo                   | de TVenMóvil, Sound MirroringyWirelessTVOn                                               |
-| Smart TV Powered by Tizen | TapView                            | Sí                                                                                       |
-| Smart TV Powered by Tizen | HDMI                               | 114": 8 puertos; Resto: 6 puertos                                                        |
-| Smart TV Powered by Tizen | USB                                | 2 puertos                                                                                |
-| Conectividad              | Compatible con DualAudio Bluetooth | Sí                                                                                       |
-| Conectividad              | Salida de audio digital (Óptica)   |                                                                                          |
-| Conectividad              |                                    | Sí                                                                                       |
-| Conectividad              | Remote Control                     | SolarCell Remote Control TM2360E                                                         |
-| Conectividad              |                                    |                                                                                          |
-| Conectividad              |                                    |                                                                                          |
-| Conectividad              |                                    |                                                                                          |
-| Conectividad              |                                    |                                                                                          |
-| Conectividad              |                                    |                                                                                          |
-| Conectividad              |                                    |                                                                                          |
-| Conectividad              |                                    |                                                                                          |
-| Conectividad              |                                    |                                                                                          |
-| Conectividad              |                                    |                                                                                          |
-| Conectividad              |                                    |                                                                                          |
-
-<!-- image -->
-
-| Encuentra la pareja perfecta para tu TV   | Encuentra la pareja perfecta para tu TV   | Encuentra la pareja perfecta para tu TV   |
-|-------------------------------------------|-------------------------------------------|-------------------------------------------|
-| Experto                                   | Aficionado                                | Principiante                              |
-| Sonido inteligente                        | Sonido surround                           | Finaypotente                              |
-| HW-Q990F                                  | HW-QS750F HW-QS750F                       | HW-S800D                                  |
+|  |  |  |
+|---|---|---|
+| Experto | Aficionado | Principiante |
+| Sonido inteligente | Sonido surround | Fina y potente |
+| HW-Q990F | HW-QS750F | HW-S800D |
 
 ## MR95F
 
-| MODELO         | Pulgadas   | Cms.   | Peso (kg.)   | Peso (kg.)   | Peso (kg.)   | Dimensión   | Dimensiones (Ancho x Alto x Fondo mm.)   | Dimensiones (Ancho x Alto x Fondo mm.)   | Dimensiones (Ancho x Alto x Fondo mm.)   | Soporte pared VESA   |
-|----------------|------------|--------|--------------|--------------|--------------|-------------|------------------------------------------|------------------------------------------|------------------------------------------|----------------------|
-|                |            |        | Sin peana    | Con peana    | Con caja     | peana       | Sin peana                                | Con peana                                | Con caja                                 | compatible           |
-| MNA114MS1CCXXE | 114'       | -      | 88.0         | -            | 187.0        | 471 x 410.6 | 2526.3 x1434.2 x 24.9                    | -                                        | 2760 x1776 x 770                         | -                    |
-| MNA89MS1BACXXE | 89'        | -      | 53.0         | -            | 122.0        | 471 x 410.6 | 1965.5 x1117.3 x 24.9                    | -                                        | 2145x1400x770                            | -                    |
-| MNA76MS1CACXXE | 76'        | -      | 41.0         | 41.0         | 56.4         | 471 x 410.6 | 1685.1 x 958.7 x 24.9                    | -                                        | 1843 x1107 x 226                         | -                    |
+| MODELO | Pulgadas | Cms. | Peso (kg.) Sin peana | Peso (kg.) Con peana | Peso (kg.) Con caja | Dimensión peana | Dimensiones (Ancho x Alto x Fondo mm.) Sin peana | Dimensiones (Ancho x Alto x Fondo mm.) Con peana | Dimensiones (Ancho x Alto x Fondo mm.) Con caja | Soporte pared VESA compatible |
+|---|---|---|---|---|---|---|---|---|---|
+| MNA114MS1CCXXE | 114' | - | 88.0 | - | 187.0 | 471 x 410.6 | 2526.3 x 1434.2 x 24.9 | - | 2760 x 1776 x 770 | - |
+| MNA89MS1BACXXE | 89' | - | 53.0 | - | 122.0 | 471 x 410.6 | 1965.5 x 1117.3 x 24.9 | - | 2145 x 1400 x 770 | - |
+| MNA76MS1CACXXE | 76' | - | 41.0 | 41.0 | 56.4 | 471 x 410.6 | 1685.1 x 958.7 x 24.9 | - | 1843 x 1107 x 226 | - |
