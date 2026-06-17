@@ -337,14 +337,6 @@ export default function CatalogViewer({ catalog }) {
                 className="max-h-[calc(100vh-20rem)] max-w-[85vw] lg:max-w-full object-contain rounded-lg shadow-2xl"
                 draggable={false}
               />
-              <button
-                onClick={(e) => { e.stopPropagation(); setLightboxOpen(true) }}
-                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-black/50 backdrop-blur-sm border border-white/20 flex items-center justify-center hover:bg-black/70 transition-all duration-200 cursor-pointer hover:scale-110 z-10"
-                style={{ touchAction: 'auto' }}
-                title="Ampliar"
-              >
-                <span className="material-symbols-outlined text-white text-xl">zoom_in</span>
-              </button>
             </div>
 
             {!isZoomed && currentPage > 1 && (
